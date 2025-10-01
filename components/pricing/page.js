@@ -62,7 +62,7 @@ const PricingSection = () => {
             Pricing
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Safely collect, process, and share your data with the plan that's right for you.
+            Safely collect, process, and share your data with the plan that&apos;s right for you.
           </p>
         </div>
 

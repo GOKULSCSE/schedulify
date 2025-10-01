@@ -209,7 +209,7 @@ export default function Home() {
           All-in-one SaaS solution designed to simplify your daily operations
         </p>
         <p className="text-gray-400 text-base md:text-lg mb-12 max-w-xl">
-          Whether you're managing projects, collaborating with teams
+          Whether you&apos;re managing projects, collaborating with teams
         </p>
 
         {/* CTA Section */}
