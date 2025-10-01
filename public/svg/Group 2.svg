@@ -1,0 +1,24 @@
+<svg width="458" height="633" viewBox="0 0 458 633" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <path id="orbit-path" d="M0 180.5C0 430.409 208.635 633 466 633C723.365 633 932 430.409 932 180.5C932 -69.4088 723.365 -272 466 -272C208.635 -272 0 -69.4088 0 180.5ZM796.855 180.5C796.855 357.933 648.726 501.77 466 501.77C283.274 501.77 135.145 357.933 135.145 180.5C135.145 3.06735 283.274 -140.77 466 -140.77C648.726 -140.77 796.855 3.06735 796.855 180.5Z"/>
+  <style>
+    .orbit-circle {
+      animation: rotateAroundPath 6s linear infinite;
+    }
+    .orbit-circle-2 {
+      animation: rotateAroundPath 6s linear infinite;
+      animation-delay: -2s;
+    }
+    @keyframes rotateAroundPath {
+      0% { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+  </style>
+</defs>
+<mask id="path-1-inside-1_20_96" fill="white">
+<path d="M0 180.5C0 430.409 208.635 633 466 633C723.365 633 932 430.409 932 180.5C932 -69.4088 723.365 -272 466 -272C208.635 -272 0 -69.4088 0 180.5ZM796.855 180.5C796.855 357.933 648.726 501.77 466 501.77C283.274 501.77 135.145 357.933 135.145 180.5C135.145 3.06735 283.274 -140.77 466 -140.77C648.726 -140.77 796.855 3.06735 796.855 180.5Z"/>
+</mask>
+<path d="M0 180.5C0 430.409 208.635 633 466 633C723.365 633 932 430.409 932 180.5C932 -69.4088 723.365 -272 466 -272C208.635 -272 0 -69.4088 0 180.5ZM796.855 180.5C796.855 357.933 648.726 501.77 466 501.77C283.274 501.77 135.145 357.933 135.145 180.5C135.145 3.06735 283.274 -140.77 466 -140.77C648.726 -140.77 796.855 3.06735 796.855 180.5Z" stroke="#24292B" stroke-width="2" mask="url(#path-1-inside-1_20_96)"/>
+<circle cx="0" cy="0" r="4.5" fill="#4000FF" class="orbit-circle" style="offset-path: url(#orbit-path);"/>
+<circle cx="0" cy="0" r="4.5" fill="#4000FF" class="orbit-circle-2" style="offset-path: url(#orbit-path);"/>
+</svg>

@@ -6,6 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
+  /* Custom colors */
+  --background: 17 24 39; /* gray-900 */
+  --foreground: 255 255 255; /* white */
+  --primary: 0 85 255; /* #0055FF */
+  --accent-green: 0 85 255; /* #0055FF */
+  --border: 55 65 81; /* gray-700 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +31,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* Card hover effect */
+.card-hover:hover {
+  border-color: rgba(0, 46, 137, 0.6) !important;
+  box-shadow: 0 10px 40px rgba(0, 46, 137, 0.2) !important;
 }
