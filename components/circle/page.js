@@ -1,47 +1,83 @@
+"use client";
 import React from 'react';
+import { HeroHighlight, Highlight } from '@/app/ui/HeroHighlight';
 
 const WorkflowSection = () => {
   const workflowCards = [
     {
-      title: 'UX Design',
+      title: 'Research & Setup',
       position: 'top-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
-      items: ['User Interviews', 'Persona', 'User Journey Map']
+      items: [
+        'Connect your calendars (Google, Outlook, iCal)',
+        'Customize booking pages with logo & brand colors',
+        'Define team roles and permissions'
+      ]
     },
     {
-      title: 'Research',
+      title: 'Smart Scheduling',
       position: 'left-0 top-1/2 -translate-y-1/2 -translate-x-1/2',
-      items: ['User Interviews', 'Persona', 'User Journey Map']
+      items: [
+        'Automate bookings, reschedules & reminders',
+        'Handle recurring events with AI-powered workflows',
+        'Sync payments with Stripe & PayPal'
+      ]
     },
     {
-      title: 'UI Design',
+      title: 'Collaboration & Management',
       position: 'right-0 top-1/2 -translate-y-1/2 translate-x-1/2',
-      items: ['User Interviews', 'Persona', 'User Journey Map']
+      items: [
+        'Manage shared calendars across teams & clients',
+        'Use the intuitive dashboard for bookings & schedules',
+        'Access on desktop, tablet & mobile seamlessly'
+      ]
     },
     {
-      title: 'Presentation',
+      title: 'Insights & Growth',
       position: 'bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2',
-      items: ['User Interviews', 'Persona', 'User Journey Map']
+      items: [
+        'Track revenue, bookings, and team activity',
+        'Analyze productivity with real-time analytics',
+        'Optimize strategy with actionable insights'
+      ]
     }
   ];
 
   const outerIcons = [
-    { icon: '🎨', color: 'bg-purple-600', position: 'top-[10%] right-[20%]' },
-    { icon: '⭐', color: 'bg-yellow-600', position: 'bottom-[20%] right-[15%]' },
-    { icon: '📊', color: 'bg-blue-600', position: 'bottom-[20%] left-[15%]' },
-    { icon: '💾', color: 'bg-teal-600', position: 'top-[10%] left-[20%]' },
-    { icon: '↑', color: 'bg-gray-700', position: 'left-[8%] top-1/2 -translate-y-1/2' },
-    { icon: '↓', color: 'bg-gray-700', position: 'right-[8%] top-1/2 -translate-y-1/2' },
-    { icon: '⚙️', color: 'bg-gray-700', position: 'top-[5%] left-1/2 -translate-x-1/2' }
+   
   ];
 
   return (
-    <section className="relative min-h-screen py-16 md:py-20 px-4 md:px-6 overflow-hidden flex items-center justify-center">
-      {/* Background gradient orbs */}
-      <div className="absolute top-1/3 left-1/3 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-blue-600/20 rounded-full blur-[150px]" />
-      <div className="absolute bottom-1/3 right-1/3 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-purple-600/20 rounded-full blur-[150px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-pink-600/10 rounded-full blur-[120px]" />
+    <section className="relative min-h-screen px-4 md:px-6 py-[150px] overflow-hidden">
+      {/* Background gradient orbs - only around circle */}
 
-      <div className="relative w-full max-w-5xl mx-auto px-4">
+      <div className="relative w-full  mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Side - Text Content */}
+          <div className="relative z-20 space-y-6">
+            <h2 className="text-[40px] font-bold text-white leading-tight">
+              Streamline Your <Highlight>Workflow</Highlight> Process
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Our comprehensive workflow management system helps you organize, track, and optimize every stage of your design process—from initial research to final presentation.
+            </p>
+            
+            <div className="flex flex-wrap gap-4 pt-4">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="px-6 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-gray-800/50 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          {/* Right Side - Circular Workflow */}
+          <div className="relative w-full flex items-center justify-center">
+            {/* Background gradient orbs - only around circle center */}
+            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-600/20 rounded-full blur-[150px]" />
+            <div className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-purple-600/20 rounded-full blur-[150px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[350px] md:h-[350px] bg-pink-600/10 rounded-full blur-[120px]" />
+            
         {/* Outer circular ring with dashed border - Hidden on mobile */}
         <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]">
           <svg className="w-full h-full -rotate-90">
@@ -109,6 +145,8 @@ const WorkflowSection = () => {
               </ul>
             </div>
           ))}
+        </div>
+          </div>
         </div>
       </div>
     </section>

@@ -78,12 +78,12 @@ export const FAQSection = () => {
       <div className="relative w-full max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left side - Image */}
-          <div className="flex-shrink-0 w-full max-w-[300px] md:max-w-[400px] lg:w-[450px] h-auto aspect-square relative z-10">
+          <div className="flex-shrink-0 w-full max-w-[450px] md:max-w-[550px] lg:w-[600px] h-auto aspect-square relative z-10">
             <Image
-              src="/images/23982.jpg"
+              src="/images/question-mark-low-poly-design 1.png"
               alt="FAQ Question mark illustration"
-              width={450}
-              height={450}
+              width={600}
+              height={600}
               className="object-contain w-full h-full" />
           </div>
 

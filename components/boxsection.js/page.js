@@ -12,37 +12,43 @@ const cardData = [
     color: '#060010',
     title: 'AI-Smart Scheduling',
     description: 'Automate bookings with customizable pages, recurring events, and time zone adjustments, so you spend less time planning and more time doing.',
-    label: 'Insights'
+    label: 'Insights',
+    icon: '/icons/Group 26.png'
   },
   {
     color: '#060010',
     title: 'Stay on Track',
     description: 'Never miss a meeting with automated email and SMS reminders, plus instant alerts for reschedules and cancellations.',
-    label: 'Overview'
+    label: 'Overview',
+    icon: '/icons/Group 32.png'
   },
   {
     color: '#060010',
     title: ' Insights That Matter',
-    description: 'Track bookings, revenue, and team performance with an intuitive admin dashboard and real-time metrics.Stay in control with a powerful admin dashboard designed for clarity. Track bookings, revenue streams, and team activity in real time. With Schedulify’s built-in analytics, you don’t just manage schedules, you understand them.',
-    label: 'Teamwork'
+    description: "Track bookings, revenue, and team performance with an intuitive admin dashboard and real-time metrics. Stay in control with a powerful admin dashboard designed for clarity. Track bookings, revenue streams, and team activity in real time. With Schedulify's built-in analytics, you don't just manage schedules, you understand them.",
+    label: 'Teamwork',
+    icon: '/icons/Group 47.png'
   },
   {
     color: '#060010',
     title: ' Powerful Team Scheduling',
     description: 'Use round-robin scheduling, shared calendars, and role-based access to keep teams organized and clients satisfied.',
-    label: 'Efficiency'
+    label: 'Efficiency',
+    icon: '/icons/Group 50.png'
   },
   {
     color: '#060010',
     title: 'Integration',
     description: 'Connect favorite tools',
-    label: 'Connectivity'
+    label: 'Connectivity',
+    icon: '/images/Group 17 (1).png'
   },
   {
     color: '#060010',
     title: 'Security',
     description: 'Enterprise-grade protection',
-    label: 'Protection'
+    label: 'Protection',
+    icon: '/icons/Group 51.png'
   }
 ];
 
@@ -673,10 +679,19 @@ const MagicBento = ({
                   clickEffect={clickEffect}
                   enableMagnetism={enableMagnetism}
                 >
-                  <div className="card__header flex justify-between gap-3 relative text-white">
+                  <div className="card__header flex justify-between gap-3 relative text-white mb-2">
                     <span className="card__label text-base">{card.label}</span>
                   </div>
-                  <div className="card__content flex flex-col relative text-white">
+                  {card.icon && (
+                    <div className="flex items-center justify-center mb-3">
+                      <img 
+                        src={card.icon} 
+                        alt={card.title}
+                        className="w-40 h-[full] object-cover rounded-lg"
+                      />
+                    </div>
+                  )}
+                  <div className="card__content flex flex-col relative text-white mt-auto">
                     <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                       {card.title}
                     </h3>
@@ -812,10 +827,19 @@ const MagicBento = ({
                   el.addEventListener('click', handleClick);
                 }}
               >
-                <div className="card__header flex justify-between gap-3 relative text-white">
+                <div className="card__header flex justify-between gap-3 relative text-white mb-2">
                   <span className="card__label text-base">{card.label}</span>
                 </div>
-                <div className="card__content flex flex-col relative text-white">
+                {card.icon && (
+                  <div className="flex items-center justify-center mb-3">
+                    <img 
+                      src={card.icon} 
+                      alt={card.title}
+                      className="w-40 h-40 object-cover rounded-lg"
+                    />
+                  </div>
+                )}
+                <div className="card__content flex flex-col relative text-white mt-auto">
                   <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                     {card.title}
                   </h3>

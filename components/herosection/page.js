@@ -164,15 +164,15 @@ export default function Home() {
             
             {/* Right side - Login & Sign Up */}
             <div className="hidden lg:flex items-center gap-3">
-              <Button variant="login" size="sm">
+              <button className="px-6 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-gray-800/50 transition-all duration-300 flex items-center gap-2">
                 Login
                 <ArrowRight className="w-4 h-4" />
-              </Button>
+              </button>
               
-              <Button variant="signup" size="sm">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2">
                 Sign In
                 <ArrowRight className="w-4 h-4" />
-              </Button>
+              </button>
             </div>
             
             {/* Mobile menu button */}
